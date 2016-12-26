@@ -18,11 +18,11 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
   
   
   
- * $ history
- * This command will show all previous commands with a number.
- * To run a previous command type !# (where # is number of command)
- * To re-run last previous command type
-   * $ !!
+* $ history
+* This command will show all previous commands with a number.
+* To run a previous command type !# (where # is number of command)
+* To re-run last previous command type
+  * $ !!
   
  
   
