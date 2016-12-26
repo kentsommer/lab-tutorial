@@ -19,7 +19,7 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
   * This will show all GPUs in nvidia-smi (instead of just first one). Will also update every 0.5 seconds
   
 * $ nvidia-smi -L 
-  * This will list all GPUs visible by Nvidia (useful for debugging added GPUs - is **NOT EFFECTED BY CUDA_VISIBLE_DEVICES**)
+  * This will list all GPUs visible by the system (useful for debugging added GPUs - is **NOT EFFECTED BY CUDA_VISIBLE_DEVICES**)
   
   
   
