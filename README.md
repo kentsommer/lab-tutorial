@@ -28,6 +28,25 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
  * To run a previous command type !# (where # is number of command)
  * To re-run last previous command type
    * $ !!
+
+
+# Use Sublime Text remotely <3
+
+On local machine (your computer perform the following):
+* In Sublime Text, open Package Manager (Ctrl-Shift-P on Linux/Win, Cmd-Shift-P on Mac, Install Package), and install rsub
+* Append the following string to your ssh connection (nothing in this string changes):
+  * -R 52698:localhost:52698
+  * Full connection string should look like:
+    * ssh -p port-num username@server-ip -R 52698:localhost:52698
+* TIP (to make ssh connecting on linux a breeze add an alias command for the above connection string)
+  * $ echo "alias sshlab='full-connection-string'" > ~/.bash_aliases && source ~/.bashrc
+    * then all you have to do is type sshlab and you will connect to the lab server
+    
+    
+On remote machine (lab server run the following):
+* $ echo "alias subl='rsub'" > ~/.bash_aliases && source ~/.bashrc
+
+Now as long as you already have Sublime Text open locally simply type `subl filename` and it will allow you to edit!
   
  
   
