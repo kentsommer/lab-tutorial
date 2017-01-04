@@ -1,11 +1,15 @@
-# List of Useful commands for working with CUDA / Multi-GPUs on lab machine
+# Info and priliminary setup for using lab server for Deep Learning
 
 Current GPUs on linux (0 = TITAN X, 1 = GTX 1080, 2 = GTX 1080)
 
 Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 970: ID is N/A)
 
-Before being able to use any deep learning libraries you will need to make sure that your CUDA environment variables are set. To do this simply add the following lines to your ~/.bashrc file
+**Before being able to use any deep learning libraries** you will need to make sure that your CUDA environment variables are set. To do this simply add (verify they exist) the following lines to your ~/.bashrc file
 * export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+* CUDA_ROOT=/usr/local/cuda
+
+# List of helpful commands and programs to make training / testing / debugging easier
+
 
 * $ export CUDA_DEVICE_ORDER="PCI_BUS_ID"
   * this will make it so that CUDA and nvidia-smi device ID's match so when you set CUDA_VISIBLE_DEVICES the ID you choose is the same ID that nvidia-smi is showing. 
@@ -26,8 +30,6 @@ Before being able to use any deep learning libraries you will need to make sure 
   
 * $ nvidia-smi -L 
   * This will list all GPUs visible by the system (useful for debugging added GPUs - is **NOT EFFECTED BY CUDA_VISIBLE_DEVICES**)
-  
-  
   
 * $ history
  * This command will show all previous commands with a number.
