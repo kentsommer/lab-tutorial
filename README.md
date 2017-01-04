@@ -1,4 +1,4 @@
-# Info and priliminary setup for using lab server for Deep Learning
+# Info and priliminary setup 
 
 Current GPUs on linux (0 = TITAN X, 1 = GTX 1080, 2 = GTX 1080)
 
@@ -8,8 +8,7 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
 * export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 * CUDA_ROOT=/usr/local/cuda
 
-# List of helpful commands and programs to make training / testing / debugging easier
-
+# List of helpful commands
 
 * $ export CUDA_DEVICE_ORDER="PCI_BUS_ID"
   * this will make it so that CUDA and nvidia-smi device ID's match so when you set CUDA_VISIBLE_DEVICES the ID you choose is the same ID that nvidia-smi is showing. 
