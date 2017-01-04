@@ -4,6 +4,9 @@ Current GPUs on linux (0 = TITAN X, 1 = GTX 1080, 2 = GTX 1080)
 
 Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 970: ID is N/A)
 
+* $ export CUDA_DEVICE_ORDER="PCI_BUS_ID"
+  * this will make it so that CUDA and nvidia-smi device ID's match so when you set CUDA_VISIBLE_DEVICES the ID you choose is the same ID that nvidia-smi is showing. 
+
 * $ export CUDA_VISIBLE_DEVICES="" 
   * this makes it so that CUDA **CANNOT** see **ANY** devices, to select a device to use simply enter its ID (0-2)
     * $ export CUDA_VISIBLE_DEVICES="0,1" 
