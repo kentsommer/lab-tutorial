@@ -17,6 +17,11 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
   * this makes it so that CUDA **CANNOT** see **ANY** devices, to select a device to use simply enter its ID (0-2)
     * $ export CUDA_VISIBLE_DEVICES="0,1" 
       * This would use GPUs 0 and 1 (TITAN and first 1080)
+
+If using Python you can also set visible devices in code:
+* os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+  * this is esspeically handy since you can have your device set per script rather than having to change globally everytime.
+
       
 * $ unset CUDA_VISIBLE_DEVICES
   * This will allow CUDA to see **ALL** GPUs
