@@ -40,12 +40,15 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
  * To run a previous command type !# (where # is number of command)
  * To re-run last previous command type
    * $ !!
-   
-```import tensorflow as tf
+
+```python
+import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
 config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.4
-set_session(tf.Session(config=config))```
+config.gpu_options.allow_growth = True
+set_session(tf.Session(config=config))
+```
+
 
 
 # Use Sublime Text remotely <3
