@@ -41,6 +41,8 @@ Current GPUs on Windows (2 GTX 1080s: IDs are N/A, 1 GTX 1070: ID is N/A, 1 GTX 
  * To re-run last previous command type
    * $ !!
 
+
+When using TensorFlow backend in Keras, making sure you don't use up all 12GB of a Titan if you don't need is helpful...
 ```python
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
